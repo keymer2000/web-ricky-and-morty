@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { Character } from 'src/app/shared/interfaces/character-interfaces';
 import { CharacterService } from 'src/app/shared/services/character.service';
 import { filter, take } from 'rxjs/operators';
 import { ActivatedRoute, NavigationEnd, ParamMap, Router } from '@angular/router';
+import { DOCUMENT } from "@angular/common";
+
 
 type RequestInfo = {
   next: string | null;
@@ -25,6 +27,7 @@ export class CharacterListComponent implements OnInit {
   private showScrollHeight = 500;
 
   constructor(
+    @Inject(DOCUMENT) private document:Document,
     private characterService: CharacterService,
     private activateRoute:ActivatedRoute,
     private router:Router
@@ -72,6 +75,18 @@ export class CharacterListComponent implements OnInit {
         }
 
       })
+  }
+
+  onScrollDown():void{
+    if(this.info.next){
+      this.pageNum++;
+      this.getDataFromService;
+    }
+  }
+
+  onScrollTop():void{
+    this.document.body.scrollTop = 0; //safari
+    this.document.documentElement.scrollTop = 0; //other browser
   }
 
 }
