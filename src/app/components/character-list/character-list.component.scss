@@ -1,0 +1,14 @@
+.container__body {
+    display: flex;
+    justify-content: center;
+}
+
+.container__card {
+    outline: 1px solid;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1rem;
+}
