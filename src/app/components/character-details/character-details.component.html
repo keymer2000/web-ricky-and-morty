@@ -1,3 +1,25 @@
-<div *ngFor="character$ | async as character">
-    <app-card-character [character]="character"></app-card-character>
-</div>
+<section class="container__card-details">
+    <div class="card" *ngIf="character$ | async as character">
+        <div class="card-image card-item ">
+            <img [src]="character.image" [alt]="character?.name" class="card-img-top" />
+        </div>
+        <div class="card-inner card-item">
+            <div class="header">
+                <h2>{{ character.name | slice: 0:15 }}</h2>
+                <h4 class="text-muted">
+                    {{ character.gender }}
+                </h4>
+                <h4>
+                    {{character.species}}
+                </h4>
+                <h4>
+                    {{character.status}}
+                </h4>
+                <small class="text-muted">
+          {{ character.created | date }}
+        </small>
+            </div>
+        </div>
+    </div>
+    <button (click)="onGoBack()">Go Back</button>
+</section>

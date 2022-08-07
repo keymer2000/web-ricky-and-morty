@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { Character } from 'src/app/shared/interfaces/character-interfaces';
@@ -15,7 +16,7 @@ export class CharacterDetailsComponent implements OnInit {
   constructor(
     private activateRoute: ActivatedRoute,
     private characterService: CharacterService,
-    // private location: Location
+    private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -27,6 +28,10 @@ export class CharacterDetailsComponent implements OnInit {
         this.character$ = this.characterService.getDetails(id);
         console.log(this.character$)
     });
+  }
+
+  onGoBack():void{
+    this.location.back();
   }
 
 }

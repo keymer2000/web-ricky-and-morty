@@ -5,7 +5,7 @@ import { CharacterListComponent } from './components/character-list/character-li
 
 const routes: Routes = [
   {
-    path: 'character-list',
+    path: '',
     component: CharacterListComponent
   },
   {
