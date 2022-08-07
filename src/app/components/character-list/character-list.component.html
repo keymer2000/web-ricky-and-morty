@@ -1,9 +1,13 @@
 <app-header></app-header>
 
-<body class="container__body" infiniteScroll (scrolled)="onScrollDown()">
+<body class="container__body" infinite-scroll (scrolled)="onScrollDown()">
     <div class="container__card">
         <ng-container *ngFor="let character of characters">
             <app-card-character [character]="character"></app-card-character>
         </ng-container>
     </div>
 </body>
+
+<button [ngClass]="'no-hidden'" *ngIf="showGoUpButton" (click)="onScrollTop()">
+    Go Up
+</button>
