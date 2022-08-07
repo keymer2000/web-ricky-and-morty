@@ -5,11 +5,13 @@
     background-color: #fff;
     max-width: 300px;
     transition: all 0.2 ease-in-out;
+    border-radius: 6px;
     &:hover {
         box-shadow: 0 5px 5px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.24);
         cursor: pointer;
     }
     img {
+        border-radius: 6px;
         opacity: 0.7;
         width: 100%;
         transition: opacity 0.7;

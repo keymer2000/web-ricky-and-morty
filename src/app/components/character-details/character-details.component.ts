@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import { CharacterService } from 'src/app/shared/services/character.service';
 @Component({
   selector: 'app-character-details',
   templateUrl: './character-details.component.html',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private activateRoute: ActivatedRoute,
+    private characterService: CharacterService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+    
   }
 
 }

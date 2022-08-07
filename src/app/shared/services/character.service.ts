@@ -6,7 +6,7 @@ import { Character } from '../interfaces/character-interfaces';
 @Injectable({
   providedIn: 'root'
 })
-export class CharacterServiceService {
+export class CharacterService {
 
   constructor(
     private http: HttpClient
@@ -16,5 +16,9 @@ export class CharacterServiceService {
   searchCharacter(query='', page = 1){
     const filter = `${environment.baseUrlApi}/?name=${query}&page=${page}`;
     return this.http.get<Character[]>(filter);
+  }
+
+  getDetails(id:number){
+    return this.http.get<Character>(`${environment.baseUrlApi}/${id}`)
   }
 }

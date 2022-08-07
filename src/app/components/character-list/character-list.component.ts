@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Character } from 'src/app/shared/interfaces/character-interfaces';
-import { CharacterServiceService } from 'src/app/shared/services/character-service.service';
+import { CharacterService } from 'src/app/shared/services/character.service';
 import { filter, take } from 'rxjs/operators';
 
 type RequestInfo = {
@@ -24,7 +24,7 @@ export class CharacterListComponent implements OnInit {
   private showScrollHeight = 500;
 
   constructor(
-    private characterService: CharacterServiceService
+    private characterService: CharacterService
   ) { }
 
   ngOnInit(): void {
