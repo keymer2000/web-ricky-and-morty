@@ -5,11 +5,11 @@ import { CharacterListComponent } from './components/character-list/character-li
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'character-list',
     component: CharacterListComponent
   },
   {
-    path: 'character-profile',
+    path: 'character-profile/:id',
     component: CharacterDetailsComponent
   }
 ];
