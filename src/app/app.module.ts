@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { FormSearchComponent } from './shared/components/form-search/form-search.component';
 import { CardCharacterComponent } from './components/card-character/card-character.component';
 import { CharacterListComponent } from './components/character-list/character-list.component';
+import { CharacterDetailsComponent } from './components/character-details/character-details.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CharacterListComponent } from './components/character-list/character-li
     HeaderComponent,
     FormSearchComponent,
     CardCharacterComponent,
-    CharacterListComponent
+    CharacterListComponent,
+    CharacterDetailsComponent
   ],
   imports: [
     BrowserModule,
