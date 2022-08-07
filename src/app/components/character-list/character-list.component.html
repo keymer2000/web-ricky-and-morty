@@ -5,6 +5,9 @@
         <ng-container *ngFor="let character of characters">
             <app-card-character [character]="character"></app-card-character>
         </ng-container>
+        <h3 *ngIf="characters.length <= 0">
+            No se encontraron resultados
+        </h3>
     </div>
 </body>
 
