@@ -4,12 +4,13 @@
 }
 
 .container__card {
-    outline: 1px solid;
     margin-top: 3rem;
-    width: 960px;
-    max-width: 960px;
+    margin-bottom: 2rem;
+    width: 1000px;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 1.5rem;
+    column-gap: 3rem;
+    row-gap: 1rem;
 }

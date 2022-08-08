@@ -1,17 +1,45 @@
 .container__card-details {
-    outline: 1px solid red;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-.card {
-    outline: 1px solid palevioletred;
-    display: flex;
+.card-details {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #1f2123;
+    -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+    box-shadow: 5px 5px 7px #2d2e2f, -5px -5px 7px #41474b;
 }
 
-.card-item {
-    width: 50%;
+.card-image {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-inner {
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.card-img-top {
+    border-radius: 100%;
+    width: 100%;
+    padding: 1rem;
+}
+
+.text-muted {
+    color: rgb(215 115 33);
+}
+
+.button__go_back {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
 }

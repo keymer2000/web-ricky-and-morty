@@ -7,7 +7,9 @@ import { Character } from 'src/app/shared/interfaces/character-interfaces';
   styleUrls: ['./card-character.component.scss']
 })
 export class CardCharacterComponent implements OnInit {
-  @Input() character?: Character;
+  // @Input() character?: Character;
+  @Input('character') character: Character;
+
   constructor() { 
   }
   

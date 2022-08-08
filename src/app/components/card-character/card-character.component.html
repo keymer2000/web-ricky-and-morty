@@ -6,17 +6,15 @@
             </a>
         </div>
         <div class="card-inner">
-            <div class="header">
-                <a [routerLink]="['/character-profile', character?.id]">
-                    <h2>{{character?.name | slice: 0:15 }}</h2>
-                </a>
-                <h4 class="text-muted">
-                    {{character?.gender}}
-                </h4>
-                <small class="text-muted">
-                    {{character?.created | date }}
-                </small>
-            </div>
+            <a class="text-muted text-link" [routerLink]="['/character-profile', character?.id]">
+                <h2 class="text-muted">{{ character?.name | slice: 0:15 }}</h2>
+            </a>
+            <h4 class="text-muted">
+                {{ character?.gender }}
+            </h4>
+            <small class="text-muted">
+        {{ character?.created | date }}
+      </small>
         </div>
     </div>
 </section>

@@ -36,7 +36,7 @@ export class CharacterListComponent implements OnInit {
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    private characterSvc: CharacterService,
+    private characterService: CharacterService,
     private route: ActivatedRoute,
     private router: Router
   ) {
@@ -96,7 +96,7 @@ export class CharacterListComponent implements OnInit {
   }
 
   private getDataFromService(): void {
-    this.characterSvc
+    this.characterService
       .searchCharacter(this.query, this.pageNum)
       .pipe(take(1))
       .subscribe(

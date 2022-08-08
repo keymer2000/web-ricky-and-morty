@@ -26,7 +26,6 @@ export class CharacterDetailsComponent implements OnInit {
     ).subscribe((params) => {
         const id = params['id'];
         this.character$ = this.characterService.getDetails(id);
-        console.log(this.character$)
     });
   }
 
