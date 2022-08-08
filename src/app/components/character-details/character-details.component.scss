@@ -28,6 +28,10 @@
     border-radius: 100%;
     width: 100%;
     padding: 1rem;
+    &:hover {
+        transform: scale(1.02, 1.02);
+        cursor: pointer;
+    }
 }
 
 .text-muted {
@@ -42,4 +46,7 @@
     color: black;
     cursor: pointer;
     font-weight: bold;
+    &:hover {
+        opacity: .8;
+    }
 }

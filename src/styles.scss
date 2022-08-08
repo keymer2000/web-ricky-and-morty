@@ -20,4 +20,8 @@
     color: black;
     font-family: "Roboto Slab", serif;
     font-weight: bolder;
+    cursor: pointer;
+    &:hover {
+        opacity: .8;
+    }
 }
